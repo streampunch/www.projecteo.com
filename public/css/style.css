@@ -1,0 +1,521 @@
+body {
+	margin: 0;
+    background: #FFFFFF url(../img/bg.jpg) center center fixed no-repeat;
+    color: #666666;
+    font-family: 'Roboto', sans-serif;
+    font-weight: 300;
+}
+
+h1, h2, h3, h4, h5, h6 {
+	color: #8BCC3D;
+	font-weight: 300;
+}
+
+a:focus { 
+    outline: none; 
+}
+
+footer {
+	background-color: #333333;
+    padding: 10px;
+    text-align: center;
+    text-transform: uppercase;
+}
+
+/******************************************
+			 Navigation Modification
+*******************************************/
+.nav {
+	margin-bottom: 0;
+}
+
+.navbar-left {
+	background-color: #F2F2F2;
+    border: medium none;
+    left: 0;
+    position: fixed;
+    top: 0;
+    z-index: 1000;
+}
+
+.navbar-left ul li {
+	position: relative;
+}
+
+.navbar-left ul li a:link,
+.navbar-left ul li a:visited {
+	color: #8BCC3D;
+	font-size: 22px;
+	padding: 15px;
+}
+
+.navbar-left ul li a:hover,
+.navbar-left ul li a:focus {
+	background: none;
+}
+
+.navbar-left ul li a.enabled {
+	box-shadow: 0 1px 2px 0px #CCCCCC;
+	background-color: #666666;
+}
+
+.navbar-left .enabled .arrow {
+	background-color: #FFFFFF;
+    border: none;
+    width: 15px;
+    height: 15px;
+    position: absolute;
+    right: -8px;
+    bottom: 20px;
+    transform:rotate(225deg);
+    -ms-transform:rotate(225deg); /* IE 9 */
+    -webkit-transform:rotate(225deg); /* Safari and Chrome */
+}
+
+
+/*******************************************
+ Bootstrap Override for Portfolio Filters 
+ *******************************************/
+
+ul#portfolio-filter li a:link,
+ul#portfolio-filter li a:visited {
+	text-align: right;
+	color: #666666;
+	padding: 10px 5px;
+}
+
+ul#portfolio-filter li.active,
+ul#portfolio-filter li a:focus {
+	background-color: #8BCC3D;
+}
+
+.portfolio-item {
+	margin-bottom: 30px;
+}
+
+.thumbnail {
+    border: none;
+    box-shadow: none;
+    display: block;
+    line-height: 20px;
+    padding: 0;
+    transition: all 0.2s ease-in-out 0s;
+}
+
+.thumbnail > img {
+	margin: 0 !important;
+	border-radius: 0 !important;
+}
+
+.thumbnail .caption {
+    color: #999999;
+    font-size: 14px;
+}
+
+/*********************************
+	Some Bootstrap Override
+*********************************/
+.well {
+    background-color: #DDDDDD;
+    border: 1px solid #CCCCCC;
+    border-radius: 4px 4px 4px 4px;
+    box-shadow: 0 1px 1px rgba(0, 0, 0, 0.05) inset;
+    color: #666666;
+    margin-bottom: 20px;
+    min-height: 20px;
+    padding: 8px 20px;
+}
+
+.well h3 {
+	margin: 0;
+	color: #666666 !important;
+}
+
+hr {
+	border: none;
+    border-top: 1px dotted #444;
+}
+
+textarea, input[type="text"], input[type="password"], input[type="datetime"], input[type="datetime-local"], input[type="date"], input[type="month"], input[type="time"], input[type="week"], input[type="number"], input[type="email"], input[type="url"], input[type="search"], input[type="tel"], input[type="color"], .uneditable-input {
+    background-color: #DDDDDD;
+    color: #333333;
+    border: 1px solid #CCCCCC;
+    transition: border 0.2s linear 0s, box-shadow 0.2s linear 0s;
+}
+
+input[type="text"], input[type="password"], input[type="datetime"], input[type="datetime-local"], input[type="date"], input[type="month"], input[type="time"], input[type="week"], input[type="number"], input[type="email"], input[type="url"], input[type="search"], input[type="tel"], input[type="color"], .uneditable-input {
+	height: 40px;
+    line-height: 40px;
+    margin-bottom: 27px;
+}
+
+.btn-theme {
+	background: none repeat scroll 0 0 #8BCC3D;
+    border: 1px solid #CCCCCC;
+    color: #FFFFFF;
+    text-transform: uppercase;
+    border-radius: 4px 4px 4px 4px;
+    cursor: pointer;
+    display: inline-block;
+    font-size: 13px;
+    font-weight: bold;
+    line-height: 13px;
+    margin-bottom: 5px;
+    outline: 0 none;
+    overflow: visible;
+    padding: 12px 20px;
+    position: relative;
+    text-decoration: none;
+    text-shadow: none;
+    transition: all 0.3s ease 0s;
+}
+
+.btn-theme:hover {
+	color: #333333;
+	background-color: #999999;
+}
+/*
+.icon-cogs:before {
+    background: none repeat scroll 0 0 #666666;
+    border-radius: 15px 15px 15px 15px;
+    content: "";
+    margin-right: 12px;
+    padding: 10px;
+}*/
+
+/******************************************
+			Number Section Navigation
+*******************************************/
+#section-counter {
+	position: fixed;
+	right: 10px;
+    top: 50%;
+}
+
+#section-counter a:link,
+#section-counter a:visited {
+	background-color: #999999;
+    color: #FFFFFF;
+    display: block;
+    height: 3px;
+    margin-bottom: 50px;
+    opacity: 0.4;
+    padding: 3px;
+    text-align: center;
+    text-decoration: none;
+    transition: all 0.2s ease-in-out 0s;
+    width: 3px;
+}
+
+#section-counter a:hover,
+#section-counter a:focus,
+#section-counter a.enabled {
+	opacity: 1;
+	background-color: #8BCC3D;
+}
+
+/**********************************
+	 Scroll to Top link 
+***********************************/
+#scrollToTop {
+	width: 40px;
+	height: 40px;
+	line-height: 40px;
+	background-color: #111111;
+	color: #8BCC3D;
+	position: fixed;
+	bottom: 0;
+	right: 0;
+	text-align: center;
+	display: none;
+	cursor: pointer;
+	transition:all 0.3s;
+	z-index: 10000;
+}
+
+#scrollToTop:hover {
+	text-decoration: none;
+	background-color: #000000;
+	color: #999999;
+}
+
+/*******************************
+	Social Media links 
+********************************/
+.social-btn {
+	display: block;
+    float: left;
+    padding: 4px 5px;
+}
+
+/********************************
+ Main Sections and Content Area
+*********************************/
+#portfolio,
+#services,
+#aboutus,
+#contact {
+	position: relative;
+}
+
+
+.page {
+  position: relative;
+  padding: 10px 0;
+  font-size: 18px;
+  font-weight: 100;
+  line-height: 1.5;
+  border-bottom: 1px solid #8BCC3D;
+}
+
+.page .arrow {
+	background-color: #8BCC3D;
+    border: 1px solid #8BCC3D;
+    top: -22px;
+    content: "";
+    height: 40px;
+    left: 50%;
+    position: absolute;
+    transform: rotate(225deg);
+    width: 40px;
+}
+
+.page h1 {
+	font-size: 90px;
+    letter-spacing: 0.12em;
+    line-height: 90px;
+    margin: 25px 0;
+}
+
+.page h2 {
+  margin: 25px 0;
+  font-size: 29px;
+    letter-spacing: 0.08em;
+    line-height: 29px;
+}
+
+.page h3 {
+	font-weight: 100;
+	margin-bottom: 30px;
+	color: #999999;
+}
+
+.page .content-byline {
+  color:#999999;
+  font-size:20px;
+  font-weight:300;
+  line-height:1.25;
+  margin-bottom:40px;
+}
+
+.page img {
+	margin: 5px auto;
+	border-radius: 4px;
+}
+
+
+/***********************************
+			Various
+***********************************/
+
+
+.opinion {
+	width: 84%;
+  background-color: #CCCCCC;
+  border-radius: 0px;
+  border: none;
+  box-shadow: none;
+  display: inline-block;
+  padding: 10px 18px;
+  position: relative;
+  vertical-align: top;
+  margin: 0;
+  color: #333333;
+}
+
+.opinion .tail {
+  background-color: #CCCCCC;
+  border-color: #CCCCCC;
+  border-style: solid;
+  border-width: 2px 0 0 2px;
+  bottom: -5px;
+  height: 9px;
+  left: 9px;
+  position: absolute;
+  transform: rotate(225deg);
+  width: 9px;
+}
+
+.opinion-who {
+	margin: 10px;
+  text-align: left;
+}
+
+.bgcolor {
+	background-color: #FFFFFF;
+	opacity: .9;
+}
+
+.circle {
+  display: block;
+-webkit-transition:all 0.3s;
+  background-color:#000000;
+  background-position:initial initial;
+  background-repeat:initial initial;
+  border-bottom-left-radius:100%;
+  border-bottom-right-radius:100%;
+  border-top-left-radius:100%;
+  border-top-right-radius:100%;
+  cursor:pointer;
+  height:150px;
+  margin:0 auto;
+  text-align:center;
+  transition:all 0.3s;
+  width:150px;
+}
+
+.circle i {
+  color: #FFFFFF;
+  line-height: 150px;
+  height: auto;
+  vertical-align:middle;
+  display: block;
+}
+
+.orange {
+	background-color:  #E36334;
+}
+
+.blue {
+	background-color: #00BAFF;
+}
+
+.pink {
+	background-color: #FF00AE;
+}
+
+.green {
+	background-color: #CAEA2A;
+}
+
+.purple {
+	background-color: #8160FF;
+}
+
+.orange-txt {
+	color:  #E36334;
+}
+
+.blue-txt {
+	color: #00BAFF;
+}
+
+.pink-txt {
+	color: #FF00AE;
+}
+
+.green-txt {
+	color: #CAEA2A;
+}
+
+.purple-txt {
+	color: #8160FF;
+}
+
+.center {
+	text-align: center;
+}
+
+.left {
+	text-align: left;
+}
+
+.right {
+	text-align: right;
+}
+
+.large {
+	font-size: 26px;
+}
+
+
+/*********************************
+		Responsive Hacks
+*********************************/
+@media (max-width: 480px) {
+	html, body {
+		overflow-x:hidden;
+	}
+
+	#scrollToTop {
+		top: 0;
+		bottom: auto;
+		right: 0;
+	}
+}
+
+@media (max-width: 768px) {
+	body {}
+
+	.navbar-left {
+		bottom: 0;
+		top:auto;
+		border-bottom: 3px solid #999999;
+	}
+
+	.navbar-left ul li a:link,
+	.navbar-left ul li a:visited {
+    font-size: 15px;
+		padding: 5px 7px;
+	}
+
+  .navbar-left .enabled .arrow {
+    background-color: #666666;
+    border: medium none;
+    bottom: 10px;
+    height: 10px;
+    position: absolute;
+    right: -5px;
+    transform: rotate(225deg);
+    -ms-transform:rotate(225deg); /* IE 9 */
+    -webkit-transform:rotate(225deg); /* Safari and Chrome */
+    width: 10px;
+}
+
+	.page {}
+
+	.container {
+		padding-left: 20px;
+		padding-right: 20px;
+	}
+
+	.page h1 {
+		font-size:36px;
+		line-height: 1;
+		margin: 20px 0;
+		text-align: left;
+	}
+
+	.page h2 {
+		font-size:22px;
+		line-height: 1.2;
+		margin: 10px 0;
+		text-align: left;
+	}
+
+	.page h3 {
+		line-height: 1;
+		font-size:18px;
+		text-align: left;
+	}
+
+	.page p {
+		text-align: left;
+	}
+
+	.page img {
+		text-align: left;
+		display: block;
+		margin: 10px 0;
+	}
+}
