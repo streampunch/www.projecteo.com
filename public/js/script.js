@@ -140,4 +140,9 @@ jQuery(document).ready(function(){
 			items.filter('.'+filter).animate({ width: 'show', height: 'show',opacity: 1 }, 'slow'); 
 		}
 	});	
+	
+	$('form').submit(function(ev) {
+		ev.preventDefault();
+		console.log('form submitted');
+	});
 });
