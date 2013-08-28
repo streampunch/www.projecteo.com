@@ -144,5 +144,36 @@ jQuery(document).ready(function(){
 	$('form').submit(function(ev) {
 		ev.preventDefault();
 		console.log('form submitted');
+		
+		var formOK = true;
+		$('form').find('input,textarea').each(function(){
+			var $this = $(this),
+				val = $.trim($this.val());
+			if (val === '') {
+				formOK = false;
+				return false;
+			}
+		}).focus(function(){
+			$('form .alert-error').slideUp('fast');
+		});
+		
+		if (!formOK) {
+			$('form .alert-error').slideDown('fast');
+			return;
+		}
+		$('form .alert-error').hide();
+		
+		var data = {
+			html : 
+				'first name: ' + $('#ContactFirstName').val() + '<br>' +
+				'last name: ' + $('#ContactLastName').val() + '<br>' +
+				'email: ' + $('#ContactEmail').val() + '<br>' +
+				'message: ' + '<p>' + $('#ContactMessage').val() + '</p>',
+			subject : 'Eugene website form inquiry'
+		};
+		$.post('/email', data, function() {
+			$('form').slideUp('fast');
+			$('#thanks').slideDown('fast');
+		});
 	});
 });

@@ -1,3 +1,5 @@
+var config = require('config');
+
 module.exports.set = function(app) {
 	app.get('/', function(req, res, next) {
 		res.render('index', {
@@ -8,7 +10,7 @@ module.exports.set = function(app) {
 	app.post('/email', function (req, res) {
 		var email = require('../lib/email.js');
 		email.send({
-		    from: process.env.EMAIL_FROM,
+		    from: config.gmail.account,
 		    to: "yoogene50@gmail.com",
 		    subject: req.body.subject, 
 		    html: req.body.html
